@@ -17,9 +17,9 @@
         <td>@{{user.handle}}</td>
         <td>
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-info">Read</button>
-                <button type="button" class="btn btn-warning">Update</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <a href="#!/read/{{user.id}}" type="button" class="btn btn-info">Read</a>
+                <a href="#!/update/{{user.id}}" type="button" class="btn btn-warning">Update</a>
+                <a href="#!/delete/{{user.id}}" type="button" class="btn btn-danger">Delete</a>
             </div>
         </td>
     </tr>
