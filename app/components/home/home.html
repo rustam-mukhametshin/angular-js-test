@@ -1,1 +1,17 @@
-<p>Home page</p>
+<h1>Home page</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th ng-repeat="h in thead" scope="col">{{h}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in users">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.first}}</td>
+        <td>{{user.last}}</td>
+        <td>@{{user.handle}}</td>
+    </tr>
+    </tbody>
+</table>

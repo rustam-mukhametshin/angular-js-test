@@ -9,6 +9,33 @@ angular.module('myApp.home', ['ngRoute'])
         });
     }])
 
-    .controller('HomeCtrl', [function () {
+    .controller('HomeCtrl', function ($scope) {
+        $scope.thead = [
+            '#',
+            'First',
+            'Last',
+            'Handle',
+            '',
+        ];
 
-    }]);
+        $scope.users = [
+            {
+                id: 1,
+                first: 'Mark',
+                last: 'Otto',
+                handle: 'mdo'
+            },
+            {
+                id: 2,
+                first: 'Jacob',
+                last: 'Thornton',
+                handle: 'fat'
+            },
+            {
+                id: 3,
+                first: 'Larry',
+                last: 'the Bird',
+                handle: 'twitter'
+            }
+        ];
+    });
