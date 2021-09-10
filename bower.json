@@ -1,0 +1,37 @@
+{
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
+  "main": "",
+  "authors": [
+    "iproman <itechman@yandex.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/iproman/angular-js-test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-loader": "^1.7.5",
+    "angular-resource": "^1.8.2",
+    "angular-route": "^1.7.5",
+    "angular-ui-grid": "^4.11.0",
+    "html5-boilerplate": "0.0.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.12",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-rev": "~0.1.0",
+    "grunt-usemin": "~2.0.2"
+  }
+}
