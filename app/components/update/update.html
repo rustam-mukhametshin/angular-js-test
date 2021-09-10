@@ -1,17 +1,33 @@
 <h1>Update page</h1>
 
-<form>
+<form ng-controller="UpdateCtrl" ng-if="user" class="mb-2 pb-2">
     <div class="form-group mb-2">
-        <label for="first">First name</label>
-        <input type="text" class="form-control" id="first" aria-describedby="firstHelp" placeholder="Enter name">
+        <label for="first">Username</label>
+        <input ng-model="user.name" type="text" class="form-control" id="first" aria-describedby="firstHelp"
+               placeholder="Enter name">
     </div>
     <div class="form-group mb-2">
-        <label for="last">Last name</label>
-        <input type="text" class="form-control" id="last" aria-describedby="last" placeholder="Enter last name">
+        <label for="last">Email</label>
+        <input ng-model="user.email" type="text" class="form-control" id="last" aria-describedby="last"
+               placeholder="Enter last name">
     </div>
     <div class="form-group mb-2">
-        <label for="handle">Handle</label>
-        <input type="text" class="form-control" id="handle" aria-describedby="handle" placeholder="Enter handle">
+        <label for="handle">Phone</label>
+        <input ng-model="user.phone" type="text" class="form-control" id="handle" aria-describedby="handle"
+               placeholder="Enter handle">
     </div>
-    <button type="submit" class="btn btn-info">Update</button>
+
+    <div class="alert alert-success" role="alert" ng-if="successMsg">
+        {{successMsg.status | json}}
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-if="errorMsg">
+        {{errorMsg | json}}
+    </div>
+
+    <button ng-click="reset()" type="button" class="btn btn-success">Reset</button>
+    <button ng-disabled="disabled" ng-click="submit(user)" type="submit" class="btn btn-success">Save</button>
 </form>
+
+
+<pre>user = {{user | json}}</pre>
