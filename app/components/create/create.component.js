@@ -6,7 +6,7 @@ angular.module('myApp.create')
         var self = $scope;
         self.disabled = false;
 
-        self.master = {};
+        self.user = {};
 
         self.submit = function (user) {
             self.disabled = true;
