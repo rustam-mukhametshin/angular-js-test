@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.delete', ['ngRoute'])
-    .controller('DeleteCtrl', [function () {
+angular.module('myApp.delete')
+    .controller('DeleteCtrl', [function ($routeParams) {
 
     }]);

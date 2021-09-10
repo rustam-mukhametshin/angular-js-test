@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.create', ['ngRoute'])
+angular.module('myApp.create')
 
     .controller('CreateCtrl', [function () {
 

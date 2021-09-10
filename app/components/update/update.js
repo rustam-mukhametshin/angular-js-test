@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.update', ['ngRoute'])
+angular.module('myApp.update')
 
     .controller('UpdateCtrl', [function () {
 

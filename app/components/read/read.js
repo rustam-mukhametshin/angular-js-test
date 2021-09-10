@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.read', ['ngRoute'])
+angular.module('myApp.read')
     .controller('ReadCtrl', [function () {
 
     }]);
