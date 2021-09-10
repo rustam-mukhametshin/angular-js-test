@@ -13,7 +13,7 @@ angular.module('myApp', [
     $locationProvider.hashPrefix('!');
 
     $routeProvider
-        .when('/delete', {
+        .when('/delete/:id', {
             templateUrl: 'components/delete/delete.html',
             controller: 'DeleteCtrl'
         })
