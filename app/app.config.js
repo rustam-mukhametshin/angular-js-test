@@ -7,6 +7,10 @@ angular
         $locationProvider.hashPrefix('!');
 
         $routeProvider
+            .when('/home', {
+                templateUrl: 'components/home/home.html',
+                controller: 'HomeCtrl'
+            })
             .when('/delete/:id', {
                 templateUrl: 'components/delete/delete.html',
                 controller: 'DeleteCtrl'
