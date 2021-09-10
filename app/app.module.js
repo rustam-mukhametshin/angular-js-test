@@ -12,5 +12,10 @@ angular.module('myApp', [
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 
-    $routeProvider.otherwise({redirectTo: '/home'});
+    $routeProvider
+        .when('/delete', {
+            templateUrl: 'components/delete/delete.html',
+            controller: 'DeleteCtrl'
+        })
+        .otherwise({redirectTo: '/home'});
 }]);
