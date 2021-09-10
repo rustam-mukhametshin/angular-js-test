@@ -17,5 +17,9 @@ angular.module('myApp', [
             templateUrl: 'components/delete/delete.html',
             controller: 'DeleteCtrl'
         })
+        .when('/create', {
+            templateUrl: 'components/create/create.html',
+            controller: 'CreateCtrl'
+        })
         .otherwise({redirectTo: '/home'});
 }]);
