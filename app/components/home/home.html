@@ -12,9 +12,9 @@
     <tbody>
     <tr ng-repeat="user in users">
         <th scope="row">{{user.id}}</th>
-        <td>{{user.first}}</td>
-        <td>{{user.last}}</td>
-        <td>@{{user.handle}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>@{{user.phone}}</td>
         <td>
             <div class="btn-group" role="group">
                 <a href="#!/read/{{user.id}}" type="button" class="btn btn-info">Read</a>
