@@ -1,9 +1,12 @@
 <h1>Home page</h1>
 
-<table class="table">
+<table class="table table-striped table-bordered">
     <thead>
     <tr>
         <th ng-repeat="h in thead" scope="col">{{h}}</th>
+        <th>
+            <button type="button" class="btn btn-success">Create new</button>
+        </th>
     </tr>
     </thead>
     <tbody>
@@ -12,6 +15,13 @@
         <td>{{user.first}}</td>
         <td>{{user.last}}</td>
         <td>@{{user.handle}}</td>
+        <td>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info">Read</button>
+                <button type="button" class="btn btn-warning">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </td>
     </tr>
     </tbody>
 </table>

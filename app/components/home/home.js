@@ -15,7 +15,6 @@ angular.module('myApp.home', ['ngRoute'])
             'First',
             'Last',
             'Handle',
-            '',
         ];
 
         $scope.users = [
