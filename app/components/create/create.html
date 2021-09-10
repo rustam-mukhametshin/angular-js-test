@@ -1,17 +1,32 @@
 <h1>Create page</h1>
 
-<form>
-    <div class="form-group">
+<form ng-controller="CreateCtrl">
+    <div class="form-group mb-2">
         <label for="first">First name</label>
-        <input type="text" class="form-control" id="first" aria-describedby="firstHelp" placeholder="Enter name">
+        <input ng-model="user.first" type="text" class="form-control" id="first" aria-describedby="firstHelp"
+               placeholder="Enter name">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label for="last">Last name</label>
-        <input type="text" class="form-control" id="last" aria-describedby="last" placeholder="Enter last name">
+        <input ng-model="user.last" type="text" class="form-control" id="last" aria-describedby="last"
+               placeholder="Enter last name">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
         <label for="handle">Handle</label>
-        <input type="text" class="form-control" id="handle" aria-describedby="handle" placeholder="Enter handle">
+        <input ng-model="user.handle" type="text" class="form-control" id="handle" aria-describedby="handle"
+               placeholder="Enter handle">
     </div>
-    <button type="submit" class="btn btn-success">Save</button>
+
+    <pre>user = {{user | json}}</pre>
+
+    <div class="alert alert-success" role="alert" ng-if="successMsg">
+        {{successMsg.status | json}}
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-if="errorMsg">
+        {{errorMsg | json}}
+    </div>
+
+    <button ng-click="reset()" type="button" class="btn btn-success">Reset</button>
+    <button ng-disabled="disabled" ng-click="submit(user)" type="submit" class="btn btn-success">Save</button>
 </form>
