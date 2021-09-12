@@ -41,6 +41,18 @@ module.exports = function (grunt) {
                 report: 'min',
                 mangle: false
             }
+        },
+
+        sass: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'app',
+                    src: ['*.scss'],
+                    dest: 'dist',
+                    ext: '.css'
+                }]
+            }
         }
     });
 
@@ -51,6 +63,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-rev');
     grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     // Tell Grunt what to do when we type "grunt" into the terminal
     grunt.registerTask('default', [
@@ -60,6 +73,7 @@ module.exports = function (grunt) {
         'uglify',
         // 'cssmin',
         'rev',
-        'usemin'
+        'usemin',
+        'sass'
     ]);
 };
