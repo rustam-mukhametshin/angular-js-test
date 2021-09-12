@@ -16,7 +16,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="user in users | filter: search | limitTo: itemsPerPage: currentPage * itemsPerPage">
+    <tr ng-repeat="user in users | filter: search | limitTo: itemsPerPage:
+            currentPage === 1 ? 0 : (currentPage - 1) * itemsPerPage
+">
 
         <th scope="row">{{user.id}}</th>
         <td>{{user.username}}</td>
