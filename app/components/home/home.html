@@ -32,3 +32,11 @@
     </tr>
     </tbody>
 </table>
+
+<div class="row">
+    <div class="col">
+        <button ng-disabled="beforeDisable()" class="btn btn-primary" ng-click="before()">Before</button>
+        <span>Page {{currentPage}} of {{totalPages}}</span>
+        <button ng-disabled="nextDisable()" class="btn btn-primary" ng-click="next()">Next</button>
+    </div>
+</div>
