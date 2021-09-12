@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             main: {
                 expand: true,
                 cwd: 'app/',
-                src: ['**', '!js/**', '!lib/**', '!**/*.css'],
+                src: ['**', '!js/**', '!lib/**', '!**/*.css', '!**/*.scss'],
                 dest: 'dist/'
             },
             shims: {
